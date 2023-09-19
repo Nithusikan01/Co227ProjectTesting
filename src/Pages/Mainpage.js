@@ -15,6 +15,7 @@ import PresentStaffNew from "./Staff/presentStaffNew";
 import PastStaffNew from "./Staff/pastStaffNew";
 import GES from "../Pages/4_General_Elective_Subjects/Front-End/GES";
 import PastStaffForm from "./Staff/pastStaffForm";
+import PresentStaffForm from "../Pages/Staff/presentStaffForm";
 import Footer from "../components/Footer/footer";
 
 function MainPage() {
@@ -51,6 +52,7 @@ function MainPage() {
                     <Route path="/PastStaffNew" element={<PastStaffNew/>}/>
                     <Route path="/GES" element={<GES/>}/>
                     <Route path="/PastStaffForm" element={<PastStaffForm/>}/>
+                    <Route path="/PresentStaffForm" element={<PresentStaffForm/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
