@@ -1,0 +1,246 @@
+[
+    {
+        "title": "Home",
+        "icon": "bi bi-house",
+        "path": "/"
+    },
+    {
+        "title": "About EEU",
+        "icon": "bi bi-journals",
+        "path": "/About EEU"
+    },
+    {
+        "title": "Staff",
+        "icon": "bi bi-person",
+        "children": [
+            {
+                "title": "Present Staff",
+                "path": "/PresentStaff"
+            },
+            {
+                "title": "Past Staff",
+                "path": "/PastStaff"
+            }
+        ]
+    },
+    {
+        "title": "General Elective Subjects",
+        "icon": "bi bi-book",
+        "path": "/GES"
+    },
+    {
+        "title": "Booking System",
+        "icon": "bi bi-journal-plus",
+        "children": [
+            {
+                "title": "Make a reservation",
+                "path": "/PastStaffForm"
+            },
+            {
+                "title": "Booking Charges",
+                "path": "/PresentStaffNew"
+            },
+            {
+                "title": "Guide to Resource Reservation",
+                "path": "/PastStaffNew"
+            }
+        ]
+    },
+    {
+        "title": "TEAL 2.0 Support and Development Center",
+        "icon": "bi bi-file-easel",
+        "children": [
+            {
+                "title": "Support and Development Center",
+                "path": "/"
+            },
+            {
+                "title": "TEAL 2.0 Seminar Series",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "Help Desk",
+        "icon": "bi bi-info-circle",
+        "children": [
+            {
+                "title": "Submit a ticket",
+                "path": "/"
+            },
+            {
+                "title": "Help Desk Admin",
+                "path": "/"
+            },
+            {
+                "title": "Guide to Help Desk",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "Student and Staff Development",
+        "icon": "bi bi-file-earmark-person",
+        "children": [
+            {
+                "title": "My Details",
+                "path": "/"
+            },
+            {
+                "title": "TEAL 2.0 Seminar Series",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "Quality Assurance System",
+        "icon": "bi bi-journal-check",
+        "children": [
+            {
+                "title": "Login",
+                "path": "/"
+            },
+            {
+                "title": "User Manual",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "Seminar Rooms",
+        "icon": "bi bi-hash",
+        "children": [
+            {
+                "title": "Seminar Room 1",
+                "path": "/"
+            },
+            {
+                "title": "Seminar Room 2",
+                "path": "/"
+            },
+            {
+                "title": "Seminar Room 3",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "A/V Facilities",
+        "icon": "bi bi-camera-reels",
+        "children": [
+            {
+                "title": "A/V Studio",
+                "path": "/"
+            },
+            {
+                "title": "EOE Perera Theater",
+                "path": "/"
+            },
+            {
+                "title": "Conference Room",
+                "path": "/"
+            },
+            {
+                "title": "Lecture Rooms",
+                "path": "/"
+            },
+            {
+                "title": "Public Addressing System",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "International Affairs",
+        "icon": "bi bi-airplane-engines",
+        "children": [
+            {
+                "title": "Information",
+                "path": "/"
+            },
+            {
+                "title": "Opportunities",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "Faculty Archives",
+        "icon": "bi bi-archive",
+        "children": [
+            {
+                "title": "Visit Faculty Archives",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "Educational Support",
+        "icon": "bi bi-hand-thumbs-up",
+        "children": [
+            {
+                "title": "Videos of Events",
+                "path": "/"
+            },
+            {
+                "title": "Videos of Subjects",
+                "path": "/"
+            },
+            {
+                "title": "Videos of Subjects",
+                "path": "/"
+            },
+            {
+                "title": "Educational Videos",
+                "path": "/"
+            },
+            {
+                "title": "Videos about University",
+                "path": "/"
+            },
+            {
+                "title": "Public Educational Links",
+                "path": "/"
+            }
+        ]
+    },
+    {
+        "title": "Developments",
+        "icon": "bi bi-journal-bookmark",
+        "children": [
+            {
+                "title": "Recent Developments",
+                "path": "/Development"
+            }
+        ]
+    },
+    {
+        "title": "Help",
+        "icon": "bi bi-hand-thumbs-up-fill",
+        "children": [
+            {
+                "title": "Contact Us",
+                "path": "/ContactUs"
+            }
+        ]
+    },
+    {
+        "title": "Site Tools",
+        "icon": "bi bi-gear",
+        "children": [
+            {
+                "title": "Recent Changes",
+                "path": "/"
+            },
+            {
+                "title": "Media Manager",
+                "path": "/"
+            },
+            {
+                "title": "Sitemap",
+                "path": "/"
+            }
+        ]
+    }
+    
+]

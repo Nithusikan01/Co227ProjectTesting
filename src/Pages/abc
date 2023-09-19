@@ -1,0 +1,18 @@
+return (
+<div className="pastStaff-list-container">
+  <div className="pastStaff-list">
+  {pastStaffs.map((pastStaff, index) => (
+    <div className="pastStaff-card" key={index}>
+      <img src={pastStaff.image} alt={`${pastStaff.name}'s photo`} />
+      <div>
+        <h2>Name: {pastStaff.name}</h2>
+        <p>Qualifications: {pastStaff.period}</p>
+        <p>Department: {pastStaff.department}</p>
+        <p>Role on EEU Website: {pastStaff.roleOnEEUWebsite}</p>
+      </div>
+    </div>
+  ))}
+  </div>
+</div>
+);
+};

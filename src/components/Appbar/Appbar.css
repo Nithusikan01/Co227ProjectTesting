@@ -1,0 +1,41 @@
+.AppBar {
+    width: 100%;
+    height: 150px;
+    background-color: #4485a1;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    
+}
+.title{
+    border-left: 1px solid ;
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        max-width: 100px;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .title{
+        border-left: none;
+    }
+}
+
+
+
+

@@ -1,0 +1,28 @@
+.TitleBar{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(56, 69, 81);
+}
+
+.Home-button{
+    height: 40px;
+    border: none;
+    margin-left: 10px;
+    background-color: rgb(56, 69, 81);
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    font-style: initial;
+    
+}
+
+.Login-button{
+    height: 40px;
+    border: none;
+    margin-right: 10px;
+    background-color: rgb(56, 69, 81);
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+
+  
