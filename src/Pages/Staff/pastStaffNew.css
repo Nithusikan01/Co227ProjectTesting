@@ -1,4 +1,10 @@
+.pastStaff-container{
+  text-align: center;
+  justify-content: center !important; /* Center items horizontally and vertically */
+  align-items: center !important; /* Center items horizontally */
+}
 
+/*Directors*/
 .director-card{
     width: 350px;
     text-align: center;
@@ -7,6 +13,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background-color: #fff;
+    align-self: auto;
   }
   
   .director-list-container{
@@ -46,4 +53,55 @@
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
+
+ 
+/*Other staffs*/  
+
+.staff-card{
+    width: 350px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .other-staff-list-container{
+    position: absolute;
+    left: 20.2%;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+  }
+  
+  .other-staff-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .staff-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .staff-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .staff-card p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Hover effect */
+  .staff-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
   

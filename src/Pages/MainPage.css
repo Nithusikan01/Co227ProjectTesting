@@ -3,3 +3,13 @@ body{
     background-color: rgb(125,151,167);  /*Light gray background */
 }
 
+.content{
+    margin-bottom: 4rem;
+}
+
+.footer{
+    margin-top: auto;
+}
+
+
+

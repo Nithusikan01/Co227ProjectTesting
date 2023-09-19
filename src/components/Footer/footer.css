@@ -1,0 +1,231 @@
+/*.footer{
+    background-color: #2d2d32;
+    padding: 2em 2em;
+}
+.sb__footer_section{
+    display: flex;
+    flex-direction: column;
+}
+.contact_us{
+    color: white;
+    font-weight: 800;
+}
+.sb__footer-links{
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2 rem;
+}
+
+.sb__footer-links-div{
+    width: 300px;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+}
+
+a{
+    color: rgb(175,175,179);
+    text-decoration: none;
+}
+
+.sb__footer-links-div h4{
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0.9rem;
+}
+
+.sb__footer-links_div p{
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.sb__footer-below{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+}
+
+.sb__footer-below-links{
+    display: flex;
+    flex-direction: row;
+}
+.sb_footer-below-links p{
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: 2rem;
+    color: white;
+    font-weight: 600;
+}
+
+hr{
+    color: white;
+    width: 100%;
+}
+
+.sb_footer-copyright p {
+    font-size: 13px;
+    line-height: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 850px){
+    .sb__footer-heading h1{
+        font-size: 44px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .sb__footer-heading h1{
+        font-size: 34px;
+        line-height: 42px;
+    }
+    .sb__footer-links div{
+        margin: 1rem 0;
+    }
+    .sb_footer-btn p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .sb__footer-below{
+        flex-direction: column;
+        justify-content: left;
+    }
+    .sb__footer-below-links p {
+        margin-left: 0rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .sb_footer-heading h1{
+        font-size: 27px;
+        line-height: 38px;
+    }
+}*/
+
+/*ul {
+    list-style-type: none;
+    padding-left: 0; 
+}*/
+
+
+.footer {
+    background-color:  #2d2d32;
+    padding: 2em;
+    color: white; /* Added text color to make text visible on the dark background */
+    font-family: sans-serif;
+}
+
+.sb__footer_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content horizontally */
+}
+
+.contact_us {
+    font-weight: 800;
+    margin-bottom: 1rem; /* Added some margin to separate the title from the content */
+}
+
+.sb__footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.sb__footer-links-div {
+    width: 100%; /* Make the content divs take up the entire width on small screens */
+    max-width: 400px; /* Added max-width to control the width on larger screens */
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: rgb(175, 175, 179);
+    text-decoration: none;
+}
+
+.sb__footer-links-div h4 {
+    font-size: 16px; /* Slightly increased the font size for better readability */
+    margin-bottom: 0.5rem; /* Reduced margin for better spacing */
+}
+
+.sb__footer-links_div p {
+    font-size: 14px; /* Increased font size for better readability */
+    margin: 0.3rem 0; /* Adjusted margins for better spacing */
+}
+
+.sb__footer-below {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem; /* Increased top margin for spacing */
+    align-items: center; /* Vertically center align the content */
+}
+
+.sb__footer-below-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; /* Added some spacing between links */
+    align-items:flex-end; /* Vertically center align the links */
+}
+
+.sb__footer-below-links p {
+    font-size: 14px; /* Increased font size for better readability */
+    font-weight: 600;
+}
+
+hr {
+    background-color: white; /* Changed color to white to make it visible on the dark background */
+    height: 1px; /* Set a fixed height for the horizontal line */
+    width: 100%;
+    margin: 1rem 0; /* Added margin for better spacing */
+}
+
+.sb_footer-copyright p {
+    font-size: 14px; /* Increased font size for better readability */
+    font-weight: 600;
+}
+
+@media screen and (max-width: 850px) {
+    .sb__footer-links-div h4 {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .sb__footer-links_div p {
+        font-size: 12px; /* Further reduced font size for smaller screens */
+    }
+    
+    .sb__footer-below {
+        flex-direction: column; /* Change to column layout for smaller screens */
+        align-items: flex-start; /* Align content to the left for smaller screens */
+    }
+    
+    .sb__footer-below-links p {
+        margin-left: 0;
+        margin-top: 0.5rem; /* Adjusted margins for better spacing on smaller screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sb__footer-links-div h4 {
+        font-size: 12px; /* Further reduced font size for the smallest screens */
+    }
+}
