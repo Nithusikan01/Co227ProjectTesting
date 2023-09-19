@@ -1,0 +1,9 @@
+.presentStaff-form-container{
+    position: absolute;
+    top: 191px;
+    left: 20.2%;
+    right: 0;
+    bottom: 0;
+    background-color: #f5f5f5; /* Light gray background */
+    align-items: center;
+  }
