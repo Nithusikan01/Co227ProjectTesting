@@ -34,7 +34,7 @@
         "children": [
             {
                 "title": "Make a reservation",
-                "path": "/PastStaffForm"
+                "path": "/"
             },
             {
                 "title": "Booking Charges",
@@ -52,11 +52,11 @@
         "children": [
             {
                 "title": "Support and Development Center",
-                "path": "/"
+                "path": "/PastStaffForm"
             },
             {
                 "title": "TEAL 2.0 Seminar Series",
-                "path": "/"
+                "path": "/PresentStaffForm"
             }
         ]
     },

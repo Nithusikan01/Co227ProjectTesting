@@ -3,9 +3,9 @@
     width: 20%;
     flex-shrink: 0;
     background-color: rgb(125,151,167);
-    /*height: 100vh;*/
     /*To auto increase the sidebar height to scroll*/
     overflow: auto;
+    height: 100%;
     /*line-height: 15pt;*/
     
   }

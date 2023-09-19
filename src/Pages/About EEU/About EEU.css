@@ -21,7 +21,7 @@
   }
   
   .About-EEU-header {
-    background-color: #f1f5fd;
+
     min-height: 100vh;
     display: block;
     flex-direction: column;
@@ -46,7 +46,7 @@
   
   .info{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     color: #000;
     margin-top: 20px;
