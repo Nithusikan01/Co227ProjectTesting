@@ -29,7 +29,7 @@ const PastStaffNew = () => {
   return (
     <div className="pastStaff-container" style={{alignItems: "center",justifyContent: "center"}}>
       <div className="director-list-container">
-        <h2>Directors</h2>
+        <h2>Director</h2>
         <div className="director-list">
           {directors.map((director, index) => (
             <div className="director-card" key={index}>
