@@ -1,6 +1,7 @@
 import React from "react";
 import './Titlebar.css';
 import { Link } from 'react-router-dom';
+import LogIn from "../Login/LoginSignup";
 
 
 function TitleBar({ history }) {
@@ -14,7 +15,7 @@ function TitleBar({ history }) {
                 </div>
                 
                 <div className="Login-button-box col-auto">
-                    <button className="Login-button">Log In</button>
+                    <Link to="" className="Login-button">Log In</Link>
                 </div>
             </div>    
         </div>

@@ -35,12 +35,14 @@ function Development() {
 
   return (
     <div className='Development-container'>
-      <h1>Development Activities of EEU</h1>
-      <ul style={{ textAlign: 'left' }}>
-        {activities.map((activity, index) => (
-          <li key={index}>{activity}</li>
-        ))}
-      </ul>
+      <h1 styles={{justifycontent: "center"}}>Development Activities of EEU</h1>
+      <div className='development-inner-container'>
+        <ul style={{ textAlign: 'left' }}>
+          {activities.map((activity, index) => (
+            <li key={index}>{activity}</li>
+          ))}
+        </ul>
+      </div> 
     </div>
   );
 }

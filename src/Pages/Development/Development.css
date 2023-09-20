@@ -4,5 +4,16 @@
     left: 20.2%;
     right: 0;
     bottom: 0;
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: #f5f5f5; /* Light gray background */   
+}
+
+.Development-inner-container {
+    width: 80%;
+    justify-self: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-right: solid;
+    border-bottom: solid;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
