@@ -6,18 +6,13 @@ const PastStaffNew = () => {
   const [pastStaffs, setPastStaffs] = useState([]);
 
   useEffect(() => {
-    loadPastStaffs();
+    axios.get('http://localhost:8080/pastStaff/all')
+    .then((response) => {
+      setPastStaffs(response.data);
+    })
   }, []);
 
-  const loadPastStaffs = async () => {
-    try {
-      const response = await axios.get("http://localhost:8080/pastStaff/all");
-      setPastStaffs(response.data);
-    } catch (error) {
-      console.error("Error loading past staffs:", error);
-    }
-  };
-
+  
   const directors = pastStaffs.filter(
     (pastStaff) => pastStaff.roleOnEEUWebsite === "Director"
   );
@@ -27,29 +22,29 @@ const PastStaffNew = () => {
   );
 
   return (
-    <div className="pastStaff-container" style={{alignItems: "center",justifyContent: "center"}}>
+    <div className="pastStaff-container">
+      <h2>Director</h2>
       <div className="director-list-container">
-        <h2>Director</h2>
         <div className="director-list">
-          {directors.map((director, index) => (
-            <div className="director-card" key={index}>
-              <img src={director.image} alt="Image is missing" />
+          {directors.map((director) => (
+            <div className="director-card" key={director.id}>
+              <img src={`data:director/jpeg;base64,${director.image}`} alt="Image is missing//" />
               <div>
-                <h2>Name: {director.name}</h2>
-                <p>Qualifications: {director.period}</p>
-                <p>Role on EEU Website: {director.roleOnEEUWebsite}</p>
+                <h2>{director.name}</h2>
+                <p>{director.period}</p>
+                <p>{director.roleOnEEUWebsite}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-
+{/*
       <div className="other-staff-list-container">
         <h2>Other Staff Members</h2>
         <div className="other-staff-list">
-          {otherStaffs.map((staff, index) => (
-            <div className="staff-card" key={index}>
-              <img src={staff.image} alt="Image is missing" />
+          {otherStaffs.map((staff) => (
+            <div className="staff-card" key={staff.id}>
+              <img src={`data:staff/jpeg;base64,${staff.image}`} alt="Image is missing" />
               <div>
                 <h2>Name: {staff.name}</h2>
                 <p>Qualifications: {staff.period}</p>
@@ -59,6 +54,7 @@ const PastStaffNew = () => {
           ))}
         </div>
       </div>
+*/}
     </div>
   );
 };
