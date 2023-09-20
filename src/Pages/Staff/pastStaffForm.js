@@ -13,10 +13,17 @@ function PastStaffForm() {
     const HandleInputChange = (e) => {
         const { name, value, files } = e.target;
 
-        setpastStaff((prevState) => ({
-            ...prevState,
-            [name]: name === 'image' ? files[0] : value,
-        }));
+        setpastStaff({
+            ...pastStaff,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleImageChange = (e) => {
+        setpastStaff({
+            ...pastStaff,
+            image: e.target.files[0],
+        });
     };
 
     const handleSubmit = async (e) => {
@@ -29,7 +36,7 @@ function PastStaffForm() {
         formData.append('image', pastStaff.image);
 
         try {
-            const response = await axios.post('/api/your-backend-endpoint', formData, {
+            const response = await axios.post('http://localhost:8080/pastStaff/add', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data', // Important for file upload
                 },
@@ -98,7 +105,7 @@ function PastStaffForm() {
                         className="form-control"
                         id="image"
                         name="image"
-                        onChange={HandleInputChange}
+                        onChange={handleImageChange}
                     />
                 </div>
 
