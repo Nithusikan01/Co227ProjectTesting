@@ -15,11 +15,11 @@
         "children": [
             {
                 "title": "Present Staff",
-                "path": "/PresentStaff"
+                "path": "/PresentStaffNew"
             },
             {
                 "title": "Past Staff",
-                "path": "/PastStaff"
+                "path": "/PastStaffNew"
             }
         ]
     },
@@ -38,11 +38,11 @@
             },
             {
                 "title": "Booking Charges",
-                "path": "/PresentStaffNew"
+                "path": "/"
             },
             {
                 "title": "Guide to Resource Reservation",
-                "path": "/PastStaffNew"
+                "path": "/"
             }
         ]
     },
@@ -220,7 +220,7 @@
         "children": [
             {
                 "title": "Contact Us",
-                "path": "/ContactUs"
+                "path": "/"
             }
         ]
     },

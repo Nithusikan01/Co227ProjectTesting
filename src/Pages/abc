@@ -1,18 +1,10 @@
-return (
-<div className="pastStaff-list-container">
-  <div className="pastStaff-list">
-  {pastStaffs.map((pastStaff, index) => (
-    <div className="pastStaff-card" key={index}>
-      <img src={pastStaff.image} alt={`${pastStaff.name}'s photo`} />
-      <div>
-        <h2>Name: {pastStaff.name}</h2>
-        <p>Qualifications: {pastStaff.period}</p>
-        <p>Department: {pastStaff.department}</p>
-        <p>Role on EEU Website: {pastStaff.roleOnEEUWebsite}</p>
-      </div>
-    </div>
-  ))}
-  </div>
-</div>
-);
-};
+<div>
+            <h2>Name: {presentStaff.name}</h2>
+            <p>Qualifications: {presentStaff.qualifications}</p>
+            <p>Department: {presentStaff.department}</p>
+            <p>Mobile Phone: {presentStaff.mobilePhone}</p>
+            <p>Telephone: {presentStaff.telePhone}</p>
+            <p>Role in Faculty: {presentStaff.roleInFaculty}</p>
+            <p>Role on EEU Website: {presentStaff.roleOnEEUWebsite}</p>
+          </div>
+        

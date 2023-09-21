@@ -5,12 +5,8 @@ import TitleBar from "../components/Titlebar/Titlebar.js";
 import SideBar from "../components/Sidebar/Sidebar.js";
 import Home from "./Home/Home";
 import About from "./About EEU/About EEU";
-import ContactUs from "./ContactUs/ContactUs";
 import Development from "../Pages/Development/Development";
-import PresentStaff from "../Pages/Staff/presentStaff";
-import PastStaff from "../Pages/Staff/PastStaff";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import MyForm from "./Staff/FomDataAdd";
 import PresentStaffNew from "./Staff/presentStaffNew";
 import PastStaffNew from "./Staff/pastStaffNew";
 import GES from "../Pages/4_General_Elective_Subjects/Front-End/GES";
@@ -44,11 +40,7 @@ function MainPage() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/About EEU" element={<About/>}/>
-                    <Route path="/ContactUs" element={<ContactUs/>}/>
                     <Route path="/Development" element={<Development/>}/>
-                    <Route path="/PresentStaff" element={<PresentStaff/>}/>
-                    <Route path="/PastStaff" element={<PastStaff/>}/>
-                    <Route path="/MyForm" element={<MyForm/>}/>
                     <Route path="/PresentStaffNew" element={<PresentStaffNew/>}/>
                     <Route path="/PastStaffNew" element={<PastStaffNew/>}/>
                     <Route path="/GES" element={<GES/>}/>
