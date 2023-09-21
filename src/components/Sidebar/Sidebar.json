@@ -98,7 +98,7 @@
         "children": [
             {
                 "title": "Login",
-                "path": "/"
+                "path": "/LogIn"
             },
             {
                 "title": "User Manual",
@@ -181,6 +181,7 @@
             {
                 "title": "Videos of Events",
                 "path": "/"
+            
             },
             {
                 "title": "Videos of Subjects",

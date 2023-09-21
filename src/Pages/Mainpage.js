@@ -13,6 +13,7 @@ import GES from "../Pages/4_General_Elective_Subjects/Front-End/GES";
 import PastStaffForm from "./Staff/pastStaffForm";
 import PresentStaffForm from "../Pages/Staff/presentStaffForm";
 import Footer from "../components/Footer/footer";
+import LogIn from "../components/Login/LoginSignup";
 
 function MainPage() {
     const [contentHeight, setContentHeight] = useState(0);
@@ -46,6 +47,7 @@ function MainPage() {
                     <Route path="/GES" element={<GES/>}/>
                     <Route path="/PastStaffForm" element={<PastStaffForm/>}/>
                     <Route path="/PresentStaffForm" element={<PresentStaffForm/>}/>
+                    <Route path="/LogIn" element={<LogIn/>}/>
                 </Routes>
                 
             </BrowserRouter>

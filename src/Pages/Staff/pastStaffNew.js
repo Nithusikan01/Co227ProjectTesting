@@ -23,7 +23,10 @@ const PastStaffNew = () => {
 
   return (
     <div className="pastStaff-container">
-      <h2>Directors</h2>
+      <div className="headings">
+        <h2>Directors</h2>
+      </div>
+      <br/>
       <div className="director-list-container">
           {directors.map((director) => (
             <div className="director-card" key={director.id}>
@@ -33,13 +36,16 @@ const PastStaffNew = () => {
                 <p>{director.period}</p>
                 <p>{director.roleOnEEUWebsite}</p>
               </div>
+              <hr style={{width: "90%"}}></hr>
             </div>
           ))}
-          <hr style={{width: "90%"}}></hr>
+          
       </div>
 
-      
-      <h2>Other Staff Members</h2>
+      <div className="headings">
+        <h2>Other Staff Members</h2>
+      </div>
+      <br/>
       <div className="staff-list-container">
         {otherStaffs.map((staff) => (
           <div className="staff-card" key={staff.id}>
@@ -49,7 +55,7 @@ const PastStaffNew = () => {
               <p>{staff.period}</p>
               <p>{staff.roleOnEEUWebsite}</p>
             </div>
-            <hr style={{width: "90%", color: 'red'}}></hr>
+            <hr style={{width: "90%"}}></hr>
           </div>       
         ))}
         <hr style={{width: "90%"}}></hr>

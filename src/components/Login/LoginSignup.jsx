@@ -5,6 +5,7 @@ const LoginSignup = () => {
     const [action, setAction] = useState("Sign Up")
     return (
         <div className = 'container'>
+            <div className='inner-container'>
             <div className = 'header'>
                 <div className = "text">{action}</div>
                 <div className = "underLine"></div>
@@ -33,6 +34,7 @@ const LoginSignup = () => {
                 <div className ={action === "Sign Up"? "submit gray": "submit"} onClick={() => setAction("Login")}>Login</div>
             </div>
 
+            </div>
         </div>
     )
 }

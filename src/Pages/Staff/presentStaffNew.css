@@ -3,8 +3,13 @@
   position: absolute;
   top: 191px;
   left: 20.2%;
-  border: solid;
   width: 79.8%;
+}
+
+.headings{
+  border-bottom: solid rgb(29, 137, 173);
+  box-shadow: 5px 5px 10px rgba(151, 205, 238, 0.4);
+  font-family: sans-serif;
 }
 
 /*Directors*/

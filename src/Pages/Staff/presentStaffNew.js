@@ -22,7 +22,9 @@ const PresentStaffNew = () => {
 
   return (
     <div className="presentStaff-container">
-      <h2>Directors</h2>
+      <div className="headings">
+        <h2>Directors</h2>
+      </div><br/>
       <div className="director-list-container">
           {directors.map((director) => (
             <div className="director-card" key={director.id}>
@@ -42,7 +44,9 @@ const PresentStaffNew = () => {
       </div>
 
       
-      <h2>Other Staff Members</h2>
+      <div className="headings">
+        <h2>Other Staff Members</h2>
+      </div><br/>
       <div className="staff-list-container">
         {otherStaffs.map((staff) => (
           <div className="staff-card" key={staff.id}>
