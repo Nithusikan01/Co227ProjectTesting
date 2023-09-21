@@ -40,6 +40,7 @@ function MainPage() {
                 <TitleBar/>
                 <AppBar/>
                 <SideBar/>
+                
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/About EEU" element={<About/>}/>
@@ -54,16 +55,9 @@ function MainPage() {
                     <Route path="/PastStaffForm" element={<PastStaffForm/>}/>
                     <Route path="/PresentStaffForm" element={<PresentStaffForm/>}/>
                 </Routes>
+                
             </BrowserRouter>
-        </div>
-
-        <div
-            className="footer"
-            style={{
-                position: contentHeight < window.innerHeight ? "absolute" : "static"
-            }}
-        >
-        <Footer />
+            <Footer />
         </div>
     </>
   
