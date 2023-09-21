@@ -1,12 +1,23 @@
 .pastStaff-container{
   text-align: center;
-  justify-content: center !important; /* Center items horizontally and vertically */
-  align-items: center !important; /* Center items horizontally */
+  position: absolute;
+  top: 191px;
+  left: 20.2%;
+  border: solid;
+  width: 79.8%;
 }
 
 /*Directors*/
+.director-list-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
 .director-card{
-    width: 350px;
+    width: 250px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -16,24 +27,9 @@
     align-self: auto;
   }
   
-  .director-list-container{
-    position: absolute;
-    top: 191px;
-    left: 20.2%;
-    right: 0;
-    bottom: 0;
-    align-items: center;
-  }
-  
-  .director-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
   .director-card img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 4px;
   }
   
@@ -55,53 +51,40 @@
   }
 
  
-/*Other staffs*/  
+  /*Other staffs*/ 
+  
+  .staff-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    border: solid;
+  }
 
-.staff-card{
-    width: 350px;
+  .staff-card{
+    width: 250px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background-color: #fff;
-  }
-  
-  .other-staff-list-container{
-    position: absolute;
-    left: 20.2%;
-    right: 0;
-    bottom: 0;
-    align-items: center;
-  }
-  
-  .other-staff-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-self: auto;
   }
 
   .staff-card img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 4px;
   }
-  
+
   .staff-card h2 {
     font-size: 1.5rem;
     margin: 10px 0;
   }
-  
-  .staff-card p {
-    margin: 8px 0;
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  /* Hover effect */
+
+    /* Hover effect */
   .staff-card:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
-  
-  
