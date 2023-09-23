@@ -7,7 +7,8 @@ html{
     left: 20.2%;
     right: 0;
     bottom: 0;
-    
+    height: 100%; /* Set a fixed height for the container */
+    overflow-y: scroll; /* Enable the vertical scrollbar */
 }
 
 .ges-inner-container{

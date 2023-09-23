@@ -1,4 +1,4 @@
-.presentStaff-form-container{
+.present-staff-crud-container{
     position: absolute;
     top: 191px;
     left: 20.2%;
@@ -7,6 +7,13 @@
     width: 79.8%;
     height: 100%; /* Set a fixed height for the container */
     overflow-y: scroll; /* Enable the vertical scrollbar */
-  }
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
 
+.navbar{
+    background-color: rgb(213, 232, 248);
+}
 

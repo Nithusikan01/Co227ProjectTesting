@@ -1,12 +1,13 @@
 .container{
     position: absolute;
     top: 191px;
-    left: 20.2%;
-    height: 138.5%;
+    left: 20.2%; 
     width: 79.8%;
     background-image: url("uop_efac.jpg");
-    background-size: 100% 138.5%;
+    background-size: cover;
     backdrop-filter: blur(10px);
+    height: 120%; /* Set a fixed height for the container */
+    overflow-y: scroll; /* Enable the vertical scrollbar */
 }
 
 .container::before {
@@ -25,10 +26,10 @@
     display:flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 300px;
-    margin-bottom: 100px;
+    margin-top: 15%;
+    margin-bottom: 10%;
     width: 400px;
-    background: rgba(129, 250, 240, 0.4)  ;
+    background: rgba(129, 250, 240, 0.4);
     padding-bottom: 30px;
     border-radius: 2em;
     font-family: sans-serif; 
@@ -39,7 +40,8 @@
     .inner-container {
       width: 100%; /* Adjust the width for mobile */
       margin-top: 100px; /* Adjust the top margin for mobile */
-      margin-bottom: 50px; /* Adjust the bottom margin for mobile */
+      margin-bottom: 10%; /* Adjust the bottom margin for mobile */
+      margin-top: 50%;
     }
   }
   

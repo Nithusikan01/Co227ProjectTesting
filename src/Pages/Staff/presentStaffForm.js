@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./PresentStaffForm.css"; // Create a CSS file for styling
+import "./PresentStaffForm.css" // Create a CSS file for styling
 
 const PresentStaffForm = () => {
   const [formData, setFormData] = useState({
@@ -64,125 +64,135 @@ const PresentStaffForm = () => {
 
   return (
     <div className="presentStaff-form-container">
-      <h3 style={{textAlign: "center",fontFamily: "sans-serif"}}>Add Present Staff</h3>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">
-            Name:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="qualifications" className="form-label">
-            Qualifications:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="qualifications"
-            name="qualifications"
-            value={formData.qualifications}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="department" className="form-label">
-            Department:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="department"
-            name="department"
-            value={formData.department}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="moblieNumber" className="form-label">
-            Moblie Number:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="moblieNumber"
-            name="moblieNumber"
-            value={formData.moblieNumber}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="telephone" className="form-label">
-            Telephone:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="telephone"
-            name="telephone"
-            value={formData.telephone}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="roleInFaculty" className="form-label">
-            Role In Faculty:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="roleInFaculty"
-            name="roleInFaculty"
-            value={formData.roleInFaculty}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="roleOnEEUWebsite" className="form-label">
-            Role On EEU Website:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="roleOnEEUWebsite"
-            name="roleOnEEUWebsite"
-            value={formData.roleOnEEUWebsite}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Add similar fields for other form inputs */}
+      <div className="presentStaff-form-inner-container border shadow">
+        <div className="headings">
+          <h3 style={{textAlign: "center",fontFamily: "sans-serif"}}>Add Present Staff</h3>
+        </div><br/>
+      
         
-        <div className="mb-3">
-          <label htmlFor="image" className="form-label">
-            Image:
-          </label>
-          <input
-            type="file"
-            className="form-control"
-            id="image"
-            name="image"
-            onChange={handleChange}
-          />
-        </div>
+        <form onSubmit={handleSubmit} className="Add-form" style={{width: "90%", marginLeft: "5%"}}>
+          <div className="content">
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">
+                Name:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
 
-        <button className="btn btn-primary" type="submit">
-          Add Present Staff
-        </button>
-      </form>
+            <div className="mb-3">
+              <label htmlFor="qualifications" className="form-label">
+                Qualifications:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="qualifications"
+                name="qualifications"
+                value={formData.qualifications}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="department" className="form-label">
+                Department:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="department"
+                name="department"
+                value={formData.department}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="moblieNumber" className="form-label">
+                Moblie Number:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="moblieNumber"
+                name="moblieNumber"
+                value={formData.moblieNumber}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="telephone" className="form-label">
+                Telephone:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="telephone"
+                name="telephone"
+                value={formData.telephone}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="roleInFaculty" className="form-label">
+                Role In Faculty:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="roleInFaculty"
+                name="roleInFaculty"
+                value={formData.roleInFaculty}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="roleOnEEUWebsite" className="form-label">
+                Role On EEU Website:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="roleOnEEUWebsite"
+                name="roleOnEEUWebsite"
+                value={formData.roleOnEEUWebsite}
+                onChange={handleChange}
+              />
+            </div>
+            
+            <div className="mb-3">
+              <label htmlFor="image" className="form-label">
+                Image:
+              </label>
+              <input
+                type="file"
+                className="form-control"
+                id="image"
+                name="image"
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <button className="btn btn-primary" type="submit">
+                Add Present Staff
+              </button>
+            </div>
+  
+          </div>
+        </form>
+        
+      </div>
     </div>
   );
 };

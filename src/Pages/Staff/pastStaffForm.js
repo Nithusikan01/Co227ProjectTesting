@@ -60,7 +60,9 @@ function PastStaffForm() {
 
     return (
         <div className="PastStaff-form-container">
-            <h3 style={{textAlign: "center",fontFamily: "sans-serif"}}>Add Past Staff</h3>
+            <div className="headings">
+                <h3 style={{textAlign: "center",fontFamily: "sans-serif"}}>Add Present Staff</h3>
+            </div><br/>
             <form onSubmit={handleSubmit} className="p-4 bg-white shadow rounded">
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name:</label>

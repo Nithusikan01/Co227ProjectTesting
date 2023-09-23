@@ -2,6 +2,12 @@ body{
     overflow-x: hidden;
 }
 
+.routes-container {
+    max-height: 80vh; /* Adjust the max height as needed */
+    overflow-y: auto;
+  }
+  
+
 
 
 

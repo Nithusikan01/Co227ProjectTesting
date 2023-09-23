@@ -125,7 +125,8 @@ hr{
     padding: 2em;
     color: white; /* Added text color to make text visible on the dark background */
     font-family: sans-serif;
-   
+    width: 100%;
+    position: relative; /* Keeps the sidebar fixed while scrolling */
 }
 
 .sb__footer_section {

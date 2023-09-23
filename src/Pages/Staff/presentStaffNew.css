@@ -1,9 +1,12 @@
 .presentStaff-container{
+  padding: 20px;
   text-align: center;
   position: absolute;
   top: 191px;
   left: 20.2%;
   width: 79.8%;
+  height: 100%; /* Set a fixed height for the container */
+  overflow-y: scroll; /* Enable the vertical scrollbar */
 }
 
 .headings{
@@ -22,7 +25,7 @@
 }
 
 .director-card{
-    width: 400px;
+    width: 40%;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;

@@ -23,12 +23,12 @@ const PresentStaffNew = () => {
   return (
     <div className="presentStaff-container">
       <div className="headings">
-        <h2>Directors</h2>
+        <h2>Director</h2>
       </div><br/>
       <div className="director-list-container">
           {directors.map((director) => (
             <div className="director-card" key={director.id}>
-              <img src={`data:director/jpeg;base64,${director.image}`} alt="Image is missing//" />
+              <img src={`data:director/jpeg;base64,${director.image}`} />
               <div>
                 <h2>{director.name}</h2>
                 <p>{director.qualifications}</p>
@@ -36,7 +36,6 @@ const PresentStaffNew = () => {
                 <p>Mobile: {director.mobilePhone}</p>
                 <p>Telephone: {director.telePhone}</p>
                 <p>{director.roleInFaculty}</p>
-                <p>{director.roleOnEEUWebsite}</p>
             </div>
             </div>
           ))}
@@ -50,7 +49,7 @@ const PresentStaffNew = () => {
       <div className="staff-list-container">
         {otherStaffs.map((staff) => (
           <div className="staff-card" key={staff.id}>
-            <img src={`data:staff/jpeg;base64,${staff.image}`} alt="Image is missing" />
+            <img src={`data:staff/jpeg;base64,${staff.image}`} />
             <div>
                 <h2> {staff.name}</h2>
                 <p>{staff.qualifications}</p>

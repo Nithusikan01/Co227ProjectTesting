@@ -5,11 +5,6 @@
         "path": "/"
     },
     {
-        "title": "About EEU",
-        "icon": "bi bi-journals",
-        "path": "/About EEU"
-    },
-    {
         "title": "Staff",
         "icon": "bi bi-person",
         "children": [
@@ -52,28 +47,10 @@
         "children": [
             {
                 "title": "Support and Development Center",
-                "path": "/PastStaffForm"
+                "path": "/"
             },
             {
                 "title": "TEAL 2.0 Seminar Series",
-                "path": "/PresentStaffForm"
-            }
-        ]
-    },
-    {
-        "title": "Help Desk",
-        "icon": "bi bi-info-circle",
-        "children": [
-            {
-                "title": "Submit a ticket",
-                "path": "/"
-            },
-            {
-                "title": "Help Desk Admin",
-                "path": "/"
-            },
-            {
-                "title": "Guide to Help Desk",
                 "path": "/"
             }
         ]
@@ -93,7 +70,7 @@
         ]
     },
     {
-        "title": "Quality Assurance System",
+        "title": "Admin Testing",
         "icon": "bi bi-journal-check",
         "children": [
             {
@@ -102,17 +79,17 @@
             },
             {
                 "title": "User Manual",
-                "path": "/"
+                "path": "/PastStaffCRUD"
             }
         ]
     },
     {
-        "title": "Seminar Rooms",
+        "title": "Facilities",
         "icon": "bi bi-hash",
         "children": [
             {
                 "title": "Seminar Room 1",
-                "path": "/"
+                "path": "/PresentStaffCRUD"
             },
             {
                 "title": "Seminar Room 2",
@@ -121,13 +98,7 @@
             {
                 "title": "Seminar Room 3",
                 "path": "/"
-            }
-        ]
-    },
-    {
-        "title": "A/V Facilities",
-        "icon": "bi bi-camera-reels",
-        "children": [
+            },
             {
                 "title": "A/V Studio",
                 "path": "/"
@@ -150,6 +121,7 @@
             }
         ]
     },
+    
     {
         "title": "International Affairs",
         "icon": "bi bi-airplane-engines",
@@ -160,16 +132,6 @@
             },
             {
                 "title": "Opportunities",
-                "path": "/"
-            }
-        ]
-    },
-    {
-        "title": "Faculty Archives",
-        "icon": "bi bi-archive",
-        "children": [
-            {
-                "title": "Visit Faculty Archives",
                 "path": "/"
             }
         ]
@@ -221,27 +183,8 @@
         "children": [
             {
                 "title": "Contact Us",
-                "path": "/"
-            }
-        ]
-    },
-    {
-        "title": "Site Tools",
-        "icon": "bi bi-gear",
-        "children": [
-            {
-                "title": "Recent Changes",
-                "path": "/"
-            },
-            {
-                "title": "Media Manager",
-                "path": "/"
-            },
-            {
-                "title": "Sitemap",
-                "path": "/"
+                "path": "/ContactUs"
             }
         ]
     }
-    
 ]

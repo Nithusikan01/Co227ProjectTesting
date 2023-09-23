@@ -30,7 +30,7 @@ const PastStaffNew = () => {
       <div className="director-list-container">
           {directors.map((director) => (
             <div className="director-card" key={director.id}>
-              <img src={`data:director/jpeg;base64,${director.image}`} alt="Image is missing//" />
+              <img src={`data:director/jpeg;base64,${director.image}`} alt="Director_image missing" />
               <div>
                 <h2>{director.name}</h2>
                 <p>{director.period}</p>
@@ -49,7 +49,7 @@ const PastStaffNew = () => {
       <div className="staff-list-container">
         {otherStaffs.map((staff) => (
           <div className="staff-card" key={staff.id}>
-            <img src={`data:staff/jpeg;base64,${staff.image}`} alt="Image is missing" />
+            <img src={`data:staff/jpeg;base64,${staff.image}`} alt="Stafmissingf_image" />
             <div>
               <h2>{staff.name}</h2>
               <p>{staff.period}</p>

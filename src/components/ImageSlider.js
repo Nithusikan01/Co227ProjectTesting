@@ -7,15 +7,15 @@ import third from '../images/peradeniya-engineering-faculty-most-beautiful-unive
 const slideImages = [
     {
         url: first,
-        //caption: "First Slide"
+        caption: "First Slide"
     },
     {
         url: second, 
-        //caption: "Second Slide"
+        caption: "Second Slide"
     },
     {
         url: third,
-        //caption: "Third Slide"
+        caption: "Third Slide"
     },
 ];
 
@@ -23,14 +23,14 @@ const divStyles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center", // Corrected the typo here
-    height: "400px",
+    height: "600px",
     backgroundSize: "cover"
 }
 
 const spanStyle = {
-    fontSize: "20px", // Corrected the typo here
-    background: "#efefef",
-    color: "#000000"
+    fontSize: "50px", // Corrected the typo here
+    color: "rgba(255,255,255,0.7)"
+
 }
 
 function ImageSlider() {
