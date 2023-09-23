@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./PresentStaffCrud.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 
@@ -10,10 +10,20 @@ function PresentStaffCRUD() {
   const [presentStaffs, setPresentStaffs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/presentStaff/all").then((response) => {
-      setPresentStaffs(response.data);
-    });
+    loadPresentStaffs();
   }, []);
+
+const loadPresentStaffs = async () => {
+  const result = await axios.get("http://localhost:8080/presentStaff/all");
+  setPresentStaffs(result.data);
+}
+
+  const {id} = useParams()
+
+  const deletePresentStaff = async (id) => {
+    await axios.delete(`http://localhost:8080/presentStaff/${id}`);
+    loadPresentStaffs();
+  };
 
   return (
     <div className="present-staff-crud-container">
@@ -65,12 +75,12 @@ function PresentStaffCRUD() {
                   )}
                 </td>
                 <td>
-                  <a href="#" className="link-dark">
+                  <Link className="link-dark" to={`/EditPresentStaff/${presentStaff.id}`}>
                     <i className="bi bi-pencil-square fs-5 me-3"></i>
-                  </a>
-                  <a href="#" className="link-dark">
+                  </Link>
+                  <Link className="link-dark" onClick={() => deletePresentStaff(presentStaff.id)}>
                     <i className="bi bi-trash fs-5"></i>
-                  </a>
+                  </Link>
                 </td>
               </tr>
             ))}
