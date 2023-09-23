@@ -1,80 +1,19 @@
-.Sidebar{
-  font-family: Arial, Helvetica, sans-serif;
-  width: 20%;
-  flex-shrink: 0;
-  background-color: rgb(125,151,167);
-  /*To auto increase the sidebar height to scroll*/
-  overflow: auto;
-  height: 100vh;
-  position: fixed; /* Keeps the sidebar fixed while scrolling */
-}
+useEffect(() => {
+  loadUsers();
+}, []);
+
+const loadUsers = async () => {
+  const result = await axios.get("http://localhost:8080/users");
+  setUsers(result.data);
+};
 
 
-.Sidebaritems{
-  padding: 1em;
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  border-bottom: 1px solid #fff;
-  transition: background-color .15s;
-  justify-content: space-between;  
-}
-.Sidebaritems span i{
-  display: inline-block;
-  width: 1.5em;
 
-}
+working.const..
+const [presentStaffs, setPresentStaffs] = useState([]);
 
-.Sidebaritems:hover{
-  background-color: rgba(255,255,255,.1);
-}
-
-.Sidebar-title{
-  display: flex;
-  justify-content: space-between;
-  
-}
-
-.Sidebar-title span i{
-  display: inline-block;
-  width: 1.5em;
-
-}
-
-.Sidebar-title .toggle-btn{
-  cursor: pointer;
-  transition: transform .3s;
-} this was my previous css file
-
-.Sidebaritems.open .Sidebar-title .toggle-btn{
-  transform: rotate(180deg);
-}
-
-.Sidebar-content{
-  padding-top: .25em;
-  height: 0;
-  overflow: hidden;
-  font-size: .75em;
-  
-}
-
-.Sidebaritems.open .Sidebar-content{
-  height: auto;
-  /*border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;*/
-}
-
-.Sidebar-item.plain{
-  color: #fff;
-  text-decoration: none;
-}
-
-.Sidebar-item.plain:hover{
-  text-decoration: underline;
-}
-
-.Sidebar-item.plain i{
-  display: inline-block;
-  width: 2em;
-}
+  useEffect(() => {
+    axios.get("http://localhost:8080/presentStaff/all").then((response) => {
+      setPresentStaffs(response.data);
+    });
+  }, []);
