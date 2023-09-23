@@ -5,13 +5,13 @@ import Development from "../Pages/Development/Development";
 import PresentStaffNew from "./Staff/presentStaffNew";
 import PastStaffNew from "./Staff/pastStaffNew";
 import GES from "../Pages/4_General_Elective_Subjects/Front-End/GES";
-import AddPastStaff from "./Staff/pastStaffForm";
-import AddPresentStaff from "../Pages/Staff/presentStaffForm";
+import AddPastStaff from "../Admin/Past Staff CRUD/pastStaffAdd";
+import AddPresentStaff from "../Admin/Present Staff CRUD/presentStaffAdd";
 import LogIn from "../components/Login/LoginSignup";
 import PastStaffCRUD from "../Admin/Past Staff CRUD/PastStaffCrud";
 import PresentStaffCRUD from "../Admin/Present Staff CRUD/PresentStaffCrud";
-import condtactUs from "../Pages/ContactUs/ContactUs";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import EditPresentStaff from "../Admin/Present Staff CRUD/PresentStaffEdit";
 
 const RoutesConfig = () => {
   return (
@@ -27,6 +27,7 @@ const RoutesConfig = () => {
       <Route path="/LogIn" element={<LogIn />} />
       <Route path="/PastStaffCRUD" element={<PastStaffCRUD />} />
       <Route path="/PresentStaffCRUD" element={<PresentStaffCRUD />} />
+      <Route path="/EditPresentStaff/:id" element={<EditPresentStaff/>} />
     </Routes>
   );
 };
