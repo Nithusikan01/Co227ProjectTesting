@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./PresentStaffAdd.css" // Create a CSS file for styling
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const PresentStaffForm = () => {
-  let navigate = useNavigate();
-  
-  const [formData, setFormData] = useState({
+const PresentStaffEdit = () => {
+
+  const navigate = useNavigate();
+
+  const { id } = useParams();
+
+  const [presentStaff, setPresentStaff] = useState({
     name: "",
     qualifications: "",
     department: "",
@@ -14,67 +16,41 @@ const PresentStaffForm = () => {
     telePhone: "",
     roleInFaculty: "",
     roleOnEEUWebsite: "",
-    image: null, // Assuming you want to upload an image
+    image: null,
   });
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
+  const { name,qualifications,department,mobilePhone,telePhone,roleInFaculty,roleOnEEUWebsite,image} = presentStaff;
 
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: name === "image" ? files[0] : value,
-    }));
+  const handleInputChange = (e) => {
+    setPresentStaff({ ...presentStaff, [e.target.name]: e.target.value });
+  };
+
+  useEffect(() => {
+    loadPresentStaff();
+  }, []);
+
+  const loadPresentStaff = async () => {
+    const result = await axios.get(`http://localhost:8080/presentStaff/${id}`, presentStaff);
+    setPresentStaff(result.data);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formDataToSend = new FormData();
-    for (const key in formData) {
-      formDataToSend.append(key, formData[key]);
-    }
-
-    try {
-      const response = await axios.post(
-        "http://localhost:8080/presentStaff/add",
-        formDataToSend,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data", // Important for file upload
-          },
-        }
-      );
-
-      // Handle the response from the backend (e.g., show success message)
-      console.log(response.data);
-
-      // Clear the form fields after successful submission
-      setFormData({
-        name: "",
-        qualifications: "",
-        department: "",
-        mobilePhone: "",
-        telePhone: "",
-        roleInFaculty: "",
-        roleOnEEUWebsite: "",
-        image: null,
-      });
-      navigate('/PresentStaffCRUD')
-    } catch (error) {
-      // Handle errors (e.g., show error message)
-      console.error("Error adding present staff:", error);
-    }
+    await axios.put(`http://localhost:8080/presentStaff/${id}`, presentStaff);
+    navigate("/PresentStaffCRUD")
   };
 
   return (
     <div className="presentStaff-form-container">
       <div className="presentStaff-form-inner-container border shadow">
         <div className="headings">
-          <h3 style={{textAlign: "center",fontFamily: "sans-serif"}}>Add Present Staff</h3>
-        </div><br/>
-      
-        
-        <form onSubmit={handleSubmit} className="Add-form" style={{width: "90%", marginLeft: "5%"}}>
+          <h3 style={{ textAlign: "center", fontFamily: "sans-serif" }}>
+            Edit Present Staff
+          </h3>
+        </div>
+
+        <form onSubmit={handleSubmit} className="Add-form" style={{ width: "90%", marginLeft: "5%" }}>
           <div className="content">
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
@@ -85,8 +61,8 @@ const PresentStaffForm = () => {
                 className="form-control"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
+                value={presentStaff.name}
+                onChange={handleInputChange}
               />
             </div>
 
@@ -99,8 +75,8 @@ const PresentStaffForm = () => {
                 className="form-control"
                 id="qualifications"
                 name="qualifications"
-                value={formData.qualifications}
-                onChange={handleChange}
+                value={presentStaff.qualifications}
+                onChange={handleInputChange}
               />
             </div>
 
@@ -113,22 +89,22 @@ const PresentStaffForm = () => {
                 className="form-control"
                 id="department"
                 name="department"
-                value={formData.department}
-                onChange={handleChange}
+                value={presentStaff.department}
+                onChange={handleInputChange}
               />
             </div>
 
             <div className="mb-3">
               <label htmlFor="mobilePhone" className="form-label">
-                Moblie Number:
+                Mobile Phone:
               </label>
               <input
                 type="text"
                 className="form-control"
                 id="mobilePhone"
                 name="mobilePhone"
-                value={formData.moblieNumber}
-                onChange={handleChange}
+                value={presentStaff.mobilePhone}
+                onChange={handleInputChange}
               />
             </div>
 
@@ -141,8 +117,8 @@ const PresentStaffForm = () => {
                 className="form-control"
                 id="telePhone"
                 name="telePhone"
-                value={formData.telephone}
-                onChange={handleChange}
+                value={presentStaff.telePhone}
+                onChange={handleInputChange}
               />
             </div>
 
@@ -155,8 +131,8 @@ const PresentStaffForm = () => {
                 className="form-control"
                 id="roleInFaculty"
                 name="roleInFaculty"
-                value={formData.roleInFaculty}
-                onChange={handleChange}
+                value={presentStaff.roleInFaculty}
+                onChange={handleInputChange}
               />
             </div>
 
@@ -169,11 +145,11 @@ const PresentStaffForm = () => {
                 className="form-control"
                 id="roleOnEEUWebsite"
                 name="roleOnEEUWebsite"
-                value={formData.roleOnEEUWebsite}
-                onChange={handleChange}
+                value={presentStaff.roleOnEEUWebsite}
+                onChange={handleInputChange}
               />
             </div>
-            
+
             <div className="mb-3">
               <label htmlFor="image" className="form-label">
                 Image:
@@ -183,23 +159,21 @@ const PresentStaffForm = () => {
                 className="form-control"
                 id="image"
                 name="image"
-                onChange={handleChange}
+                onChange={handleInputChange}
               />
             </div>
 
             <div className="mb-3">
               <button className="btn btn-primary" type="submit">
-                Add Present Staff
+                Update Present Staff
               </button>
             </div>
-  
           </div>
         </form>
-        
       </div>
     </div>
   );
 };
 
-export default PresentStaffForm;
-//Working condition file
+export default PresentStaffEdit;
+//Working Condition
