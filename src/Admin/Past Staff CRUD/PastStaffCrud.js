@@ -1,18 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./PastStaffCrud.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 
 function PastStaffCRUD() {
   const [pastStaffs, setPastStaffs] = useState([]);
 
-  useEffect(() => {
-    axios.get("http://localhost:8080/pastStaff/all").then((response) => {
-      setPastStaffs(response.data);
-    });
-  }, []);
+useEffect(() =>{
+  loadPastStaffs();
+}, []);
+
+const loadPastStaffs = async () => {
+  const result = await axios.get("http://localhost:8080/pastStaff/all");
+  setPastStaffs(result.data);
+}
+
+const {id} = useParams();
+
+const deletePastStaff = async (id) => {
+  await axios.delete(`http://localhost:8080/pastStaff/${id}`);
+  loadPastStaffs();
+}
 
   return (
     <div className="past-staff-crud-container">
@@ -56,12 +66,12 @@ function PastStaffCRUD() {
                   )}
                 </td>
                 <td>
-                  <a href="#" className="link-dark">
+                  <Link className="link-dark" to={`/EditPastStaff/${pastStaff.id}`}>
                     <i className="bi bi-pencil-square fs-5 me-3"></i>
-                  </a>
-                  <a href="#" className="link-dark">
+                  </Link>
+                  <Link className="link-dark" onClick={() => deletePastStaff(pastStaff.id)}>
                     <i className="bi bi-trash fs-5"></i>
-                  </a>
+                  </Link>
                 </td>
               </tr>
             ))}

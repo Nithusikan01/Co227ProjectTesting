@@ -4,8 +4,6 @@ import "./PresentStaffCrud.css";
 import { Link, useParams } from "react-router-dom";
 
 
-
-
 function PresentStaffCRUD() {
   const [presentStaffs, setPresentStaffs] = useState([]);
 
@@ -13,12 +11,12 @@ function PresentStaffCRUD() {
     loadPresentStaffs();
   }, []);
 
-const loadPresentStaffs = async () => {
-  const result = await axios.get("http://localhost:8080/presentStaff/all");
-  setPresentStaffs(result.data);
-}
+  const loadPresentStaffs = async () => {
+    const result = await axios.get("http://localhost:8080/presentStaff/all");
+    setPresentStaffs(result.data);
+  }
 
-  const {id} = useParams()
+  const {id} = useParams();
 
   const deletePresentStaff = async (id) => {
     await axios.delete(`http://localhost:8080/presentStaff/${id}`);
@@ -82,7 +80,7 @@ const loadPresentStaffs = async () => {
                     <i className="bi bi-trash fs-5"></i>
                   </Link>
                 </td>
-              </tr>
+              </tr> 
             ))}
           </tbody>
         </table>
