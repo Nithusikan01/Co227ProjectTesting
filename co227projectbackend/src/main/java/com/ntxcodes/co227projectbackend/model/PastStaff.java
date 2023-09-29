@@ -12,8 +12,8 @@ public class PastStaff {
     private String roleOnEEUWebsite;
 
     @Lob
-    @Column(length = 15728640)
-    private byte image;
+    @Column(length = 5242880)
+    private byte[] image;
     //constructor
     public PastStaff() {
     }
@@ -51,11 +51,11 @@ public class PastStaff {
         this.roleOnEEUWebsite = roleOnEEUWebsite;
     }
 
-    public byte getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(byte image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 }

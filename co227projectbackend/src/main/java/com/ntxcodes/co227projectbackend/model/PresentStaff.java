@@ -14,7 +14,11 @@ public class PresentStaff {
     private String telePhone;
     private String roleInFaculty;
     private String roleOnEEUWebsite;
-    private String imagePath;
+
+    @Lob
+    @Column(length = 5242880)
+    private byte[] image;
+
 
     //constructor
     public PresentStaff() {
@@ -85,11 +89,11 @@ public class PresentStaff {
         this.roleOnEEUWebsite = roleOnEEUWebsite;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public byte[] getImage() {
+        return image;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }
