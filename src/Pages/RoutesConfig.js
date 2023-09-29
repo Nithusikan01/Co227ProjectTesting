@@ -12,6 +12,7 @@ import PastStaffCRUD from "../Admin/Past Staff CRUD/PastStaffCrud";
 import PresentStaffCRUD from "../Admin/Present Staff CRUD/PresentStaffCrud";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import EditPresentStaff from "../Admin/Present Staff CRUD/PresentStaffEdit";
+import EditPastStaff from "../Admin/Past Staff CRUD/PastStaffEdit";
 
 const RoutesConfig = () => {
   return (
@@ -28,6 +29,7 @@ const RoutesConfig = () => {
       <Route path="/PastStaffCRUD" element={<PastStaffCRUD />} />
       <Route path="/PresentStaffCRUD" element={<PresentStaffCRUD />} />
       <Route path="/EditPresentStaff/:id" element={<EditPresentStaff/>} />
+      <Route path="/EditPastStaff/:id" element={<EditPastStaff/>} />
     </Routes>
   );
 };
