@@ -13,14 +13,14 @@ useEffect(() =>{
 }, []);
 
 const loadPastStaffs = async () => {
-  const result = await axios.get("http://localhost:8080/pastStaff/all");
+  const result = await axios.get("http://localhost:8080/api/v1/auth/pastStaff/all");
   setPastStaffs(result.data);
 }
 
 const {id} = useParams();
 
 const deletePastStaff = async (id) => {
-  await axios.delete(`http://localhost:8080/pastStaff/${id}`);
+  await axios.delete(`http://localhost:8080/api/v1/auth/pastStaff/${id}`);
   loadPastStaffs();
 }
 
@@ -74,7 +74,8 @@ const deletePastStaff = async (id) => {
                   </Link>
                 </td>
               </tr>
-            ))}
+            ))
+            }
           </tbody>
         </table>
       </div>

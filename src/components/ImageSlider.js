@@ -17,6 +17,14 @@ const slideImages = [
         url: third,
         caption: "Third Slide"
     },
+    {
+        url: second,
+        caption: "Fourth Slide"
+    },
+    {
+        url: third,
+        caption: "Fifth Slide"
+    },
 ];
 
 const divStyles = {

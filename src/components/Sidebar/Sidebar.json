@@ -26,20 +26,8 @@
     {
         "title": "Booking System",
         "icon": "bi bi-journal-plus",
-        "children": [
-            {
-                "title": "Make a reservation",
-                "path": "/"
-            },
-            {
-                "title": "Booking Charges",
-                "path": "/"
-            },
-            {
-                "title": "Guide to Resource Reservation",
-                "path": "/"
-            }
-        ]
+        "path": "https://www.skedda.com/"
+
     },
     {
         "title": "TEAL 2.0 Support and Development Center",
@@ -47,20 +35,6 @@
         "children": [
             {
                 "title": "Support and Development Center",
-                "path": "/"
-            },
-            {
-                "title": "TEAL 2.0 Seminar Series",
-                "path": "/"
-            }
-        ]
-    },
-    {
-        "title": "Student and Staff Development",
-        "icon": "bi bi-file-earmark-person",
-        "children": [
-            {
-                "title": "My Details",
                 "path": "/"
             },
             {
@@ -117,21 +91,6 @@
             },
             {
                 "title": "Public Addressing System",
-                "path": "/"
-            }
-        ]
-    },
-    
-    {
-        "title": "International Affairs",
-        "icon": "bi bi-airplane-engines",
-        "children": [
-            {
-                "title": "Information",
-                "path": "/"
-            },
-            {
-                "title": "Opportunities",
                 "path": "/"
             }
         ]

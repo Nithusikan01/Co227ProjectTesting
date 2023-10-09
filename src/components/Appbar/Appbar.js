@@ -2,12 +2,13 @@ import React from "react";
 import "./Appbar.css";
 import UOP_LOGO from "./UOP_LOGO.png";
 
+
 function AppBar() {
     return(
         <>
         <div className="AppBar"> 
             
-                <div class="row">
+                <div className="row">
                     <div className="col-2 logo">
                     <img className="responsive-logo" src={UOP_LOGO} alt="Logo Not Found." style={{ height: '40%', width: '40%'}} />
                     </div>

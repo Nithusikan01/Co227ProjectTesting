@@ -12,14 +12,14 @@ function PresentStaffCRUD() {
   }, []);
 
   const loadPresentStaffs = async () => {
-    const result = await axios.get("http://localhost:8080/presentStaff/all");
+    const result = await axios.get("http://localhost:8080/api/v1/auth/presentStaff/all");
     setPresentStaffs(result.data);
   }
 
   const {id} = useParams();
 
   const deletePresentStaff = async (id) => {
-    await axios.delete(`http://localhost:8080/presentStaff/${id}`);
+    await axios.delete(`http://localhost:8080/api/v1/auth/presentStaff/${id}`);
     loadPresentStaffs();
   };
 

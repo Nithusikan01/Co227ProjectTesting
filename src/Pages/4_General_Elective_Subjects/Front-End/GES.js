@@ -11,7 +11,7 @@ const GES = () => {
   },[]);
 
   const loadCourses =async () =>{
-    const result=await axios.get("http://localhost:8080/getcourses");
+    const result=await axios.get("http://localhost:8080/api/v1/auth/getcourses");
     setCourses(result.data);
   }
   return (

@@ -31,7 +31,6 @@ function MainPage() {
           <AppBar />
           <SideBar />
           <div className="routes-container">
-            {/* Use the RoutesConfig component for rendering routes */}
             <RoutesConfig />
           </div>
         </BrowserRouter>

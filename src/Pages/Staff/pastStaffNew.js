@@ -6,7 +6,7 @@ const PastStaffNew = () => {
   const [pastStaffs, setPastStaffs] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/pastStaff/all')
+    axios.get('http://localhost:8080/api/v1/auth/pastStaff/all')
     .then((response) => {
       setPastStaffs(response.data);
     })

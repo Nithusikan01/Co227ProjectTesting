@@ -6,7 +6,7 @@ const PresentStaffNew = () => {
   const [presentStaffs, setPresentStaffs] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/presentStaff/all')
+    axios.get('http://localhost:8080/api/v1/auth/presentStaff/all')
     .then((response) => {
       setPresentStaffs(response.data);
     })   

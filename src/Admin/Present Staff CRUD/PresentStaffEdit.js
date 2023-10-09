@@ -29,7 +29,7 @@ const PresentStaffEdit = () => {
   useEffect(() => {
     const loadStaff = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/presentStaff/${id}`);
+        const response = await axios.get(`http://localhost:8080/api/v1/auth/presentStaff/${id}`);
         setFormData(response.data);
       } catch (error) {
         console.error("Error loading present staff:", error);
@@ -45,7 +45,7 @@ const PresentStaffEdit = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8080/presentStaff/${id}`,
+        `http://localhost:8080/api/v1/auth/presentStaff/${id}`,
         formData
       );
 
