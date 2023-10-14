@@ -1,9 +1,11 @@
 import React from "react";
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from "react-slideshow-image";
-import first from '../images/efac.jpg' 
-import second from '../images/uop.jpg'
+import first from '../images/uop_1.jpg' 
+import second from '../images/uop_2.jpg'
 import third from '../images/peradeniya-engineering-faculty-most-beautiful-university-south-asia-105838063.webp'
+import forth from '../images/uop_3.jpg'
+import fifth from '../images/uop_5.jpg'
 const slideImages = [
     {
         url: first,
@@ -18,11 +20,11 @@ const slideImages = [
         caption: "Third Slide"
     },
     {
-        url: second,
+        url: forth,
         caption: "Fourth Slide"
     },
     {
-        url: third,
+        url: fifth,
         caption: "Fifth Slide"
     },
 ];

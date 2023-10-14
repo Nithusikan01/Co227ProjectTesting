@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./MainPage.css";
 import AppBar from "../components/Appbar/Appbar";
-import TitleBar from "../components/Titlebar/Titlebar.js";
 import SideBar from "../components/Sidebar/Sidebar.js";
 import { BrowserRouter } from "react-router-dom";
 import RoutesConfig from "./RoutesConfig"; // Import the RoutesConfig component
 import Footer from "../components/Footer/footer";
+
+
+
+
 
 function MainPage() {
   const [contentHeight, setContentHeight] = useState(0);
@@ -26,14 +29,14 @@ function MainPage() {
   return (
     <>
       <div className="content" style={{ minHeight: `${contentHeight}px` }}>
+        
+        <AppBar />
+        <SideBar/>
         <BrowserRouter>
-          <TitleBar />
-          <AppBar />
-          <SideBar />
-          <div className="routes-container">
-            <RoutesConfig />
-          </div>
+          <RoutesConfig/>
         </BrowserRouter>
+        
+        
         <div className="footer-conatiner">
           <Footer />
         </div>

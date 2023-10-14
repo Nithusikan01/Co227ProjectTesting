@@ -41,7 +41,7 @@ function PastStaffForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/pastStaff/add",
+        "http://localhost:8080/api/v1/auth/add",
         formData,
         {
           headers: {

@@ -14,15 +14,21 @@ import ContactUs from "../Pages/ContactUs/ContactUs";
 import EditPresentStaff from "../Admin/Present Staff CRUD/PresentStaffEdit";
 import EditPastStaff from "../Admin/Past Staff CRUD/PastStaffEdit";
 
+import LoginTest from "../Pages/LogIn/Login";
+import RegisterTest from "../Pages/LogIn/Register"
+
+
+
+
 const RoutesConfig = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Development" element={<Development />} />
+      <Route path="/" element={<Home/>} />
+      <Route path="/Development" element={<Development/>} />
       <Route path="/ContactUs" element={<ContactUs/>} />
-      <Route path="/PresentStaffNew" element={<PresentStaffNew />} />
-      <Route path="/PastStaffNew" element={<PastStaffNew />} />
-      <Route path="/GES" element={<GES />} />
+      <Route path="/PresentStaffNew" element={<PresentStaffNew/>} />
+      <Route path="/PastStaffNew" element={<PastStaffNew/>} />
+      <Route path="/GES" element={<GES/>} />
       <Route path="/AddPastStaff" element={<AddPastStaff />} />
       <Route path="/AddPresentStaff" element={<AddPresentStaff />} />
       <Route path="/LogIn" element={<LogIn />} />
@@ -30,7 +36,10 @@ const RoutesConfig = () => {
       <Route path="/PresentStaffCRUD" element={<PresentStaffCRUD />} />
       <Route path="/EditPresentStaff/:id" element={<EditPresentStaff/>} />
       <Route path="/EditPastStaff/:id" element={<EditPastStaff/>} />
-    </Routes>
+
+      <Route path="/LoginTest" element={<LoginTest />} />
+      <Route path="/RegisterTest" element={<RegisterTest />} />
+  </Routes>
   );
 };
 

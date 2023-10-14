@@ -11,18 +11,16 @@ const Footer = () => {
                     <h3>Director</h3>
                     <span>
                         
-                            <p><b>Dr. Eng. Kamalanath Samarakoon</b></p>
+                            <p><b>Dr. Isuru Nawinne</b></p>
                             <p>Dept of Computer Engineering,<br></br>Faculty of Engineering,<br></br>University of Peradeniya,<br></br>Sri Lanka.</p>
                             <p>Telephone:</p>
                             <ul>
-                                <li>Office:  +94 (0)81 2393918</li>
-                                <li>Home:  +94 (0)81 2499199</li>
-                                <li>Mobile: +94 (0)71 2277994</li>
+                                <li>Office:  +94 (0)81 2393470</li>
                             </ul>
                             <p>Mail: </p>
                             <ul>
                                 <li>direeu@eng.pdn.ac.lk</li>
-                                <li>kamalanath@eng.pdn.ac.lk</li>
+                                <li>isurunawinne@eng.pdn.ac.lk</li>
                             </ul>
                         
                     </span>
@@ -38,12 +36,9 @@ const Footer = () => {
                 <div className = "sb__footer-links-div">
                     <h3>Contact</h3>
                     <ul>
-                        <li>Phone: +94 (0)81 2393918</li>
-                        <li>Mobile:</li>
+                        <li>Phone: +94 (0)81 2393470</li>
                         <li>Office : 081 2393304 / 081 2393313</li>
-                    </ul>
-                    
-                    
+                    </ul>   
                 </div>
             </div>
 

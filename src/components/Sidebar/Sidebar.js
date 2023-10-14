@@ -9,7 +9,7 @@ export default function Sidebar(){
 
     return (
       <div className= "Sidebar">
-        <SearchBar placeholder="earch..." data={SearchData}/>
+        <SearchBar placeholder="Search..." data={SearchData}/>
         {
           items.map((item,index) => <SidebarItem key={index} item={item}/>)
          

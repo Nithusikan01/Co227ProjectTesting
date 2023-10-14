@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'; // Import Link for internal links
 import './Searchbar.css';
 import SearchIcon from './SearchIcon';
 import CloseIcon from './CloseIcon';
 
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
+  const [wordEntered, setWordEntered] = useState('');
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
@@ -14,7 +14,7 @@ function SearchBar({ placeholder, data }) {
     const newFilter = data.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
-    if (searchWord === "") {
+    if (searchWord === '') {
       setFilteredData([]);
     } else {
       setFilteredData(newFilter);
@@ -23,18 +23,18 @@ function SearchBar({ placeholder, data }) {
 
   const clearInput = () => {
     setFilteredData([]);
-    setWordEntered("");
+    setWordEntered('');
   };
 
   return (
-    <div className='search'>
-      <div className='searchInputs'>
-        <input type='text' placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
-        <div className='searchIcon'>
+    <div className="search">
+      <div className="searchInputs">
+        <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
+        <div className="searchIcon">
           {filteredData.length === 0 ? (
             <SearchIcon />
           ) : (
-            <div id='clearButton' onClick={clearInput}>
+            <div id="clearButton" onClick={clearInput}>
               <CloseIcon />
             </div>
           )}
@@ -42,12 +42,18 @@ function SearchBar({ placeholder, data }) {
       </div>
 
       {filteredData.length !== 0 && (
-        <div className='dataResult'>
+        <div className="dataResult">
           {filteredData.slice(0, 5).map((value, key) => {
             return (
-              <Link to={value.path} key={key}>
-                <p>{value.title}</p>
-              </Link>
+              value.path.startsWith('http') ? ( // Check if it's an external link
+                <a href={value.path} target="_blank" rel="noopener noreferrer" key={key}>
+                  <p>{value.title}</p>
+                </a>
+              ) : (
+                <Link to={value.path} key={key}>
+                  <p>{value.title}</p>
+                </Link>
+              )
             );
           })}
         </div>

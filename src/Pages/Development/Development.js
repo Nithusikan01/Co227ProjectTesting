@@ -1,7 +1,9 @@
 import React from 'react';
 import './Development.css';
+import Logout from "../LogIn/Logout"
 
 function Development() {
+
   const activities = [
     "2018 Improving the web to provide educational resources to students",
     "2017-2018 Development of Alumni Management System",
@@ -33,8 +35,11 @@ function Development() {
     "2014 Purchasing Digital Video Camera with accessories"
   ];
 
+
+
   return (
     <div className='Development-container'>
+      <Logout/>
       <h1 styles={{justifycontent: "center"}}>Development Activities of EEU</h1>
       <div className='development-inner-container'>
         <ul style={{ textAlign: 'left' }}>
